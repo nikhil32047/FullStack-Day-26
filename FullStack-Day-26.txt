@@ -1,0 +1,63 @@
+Day 26:
+===========
+
+1) Instance Method
+=======================
+An instance method works with instance (object) data.
+It is defined with self as the first parameter and can access or modify instance variables.
+
+Example:
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+    def show(self):      # instance method
+        print(self.name)
+
+s = Student("Nikhil")
+s.show()
+
+Key Points:
+Uses self
+Called using object
+Accesses instance variables
+
+
+2) Class Method
+=====================
+A class method works with class-level data.
+It is defined using @classmethod and takes cls as the first parameter.
+
+Example:
+class Student:
+    college = "ABC College"
+
+    @classmethod
+    def get_college(cls):
+        print(cls.college)
+
+Student.get_college()
+
+Key Points:
+Uses cls
+Accesses class variables
+Called using class or object
+
+
+3) Static Method
+=======================
+A static method does not use instance (self) or class (cls) data.
+It behaves like a normal function but belongs to the class.
+
+Example:
+class Math:
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+print(Math.add(10, 20))
+
+Key Points:
+Uses @staticmethod
+No self or cls
+Utility/helper methods
